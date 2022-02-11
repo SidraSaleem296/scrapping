@@ -1,0 +1,13 @@
+import requests
+r = requests.get("https://httpbin.org/get")
+# r = requests.get("https://httpbin.org/get/404")
+r.status_code == requests.codes.ok
+# to chcek whether the request code is true or false
+r.content
+#to access the data of a scrapped website(inclused pdf etc , which are in binary form) in binary form
+r.text
+# to scrape the data in non binary format
+r.json()
+# the python dictionary format ,by which data can be read easily
+r.encoding
+# responses are utf-8 encoded
